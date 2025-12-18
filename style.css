@@ -14,22 +14,26 @@
 }
 
 body {
+    position: relative;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-secondary);
-    height: 100vh;
+
 
     display: flex;
     justify-content: center;
+    flex-direction: column;
  
 }
 
 /* --- LAYOUT CONTAINER --- */
 .container {
+    position: sticky;
+    top: 0;
    width: 100%;
    background: #202020;
    aspect-ratio: 16/9;
-    height: fit-content;
+    height: auto;
     display: flex;
     
     flex-direction: column;
@@ -40,10 +44,22 @@ body {
 
     box-shadow: 0 20px 50px rgba(0,0,0,0.05);
  
-    padding-top: 10vw;
-    border-radius: 0 0 5% 5%;
+    padding-top: 10vh;
+    border-radius:2%;
+ 
+ 
 }
 
+
+.welcome{
+position: relative;
+    color: #666;
+    width: fit-content;
+    border: solid 2px #337218;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 5vh;
+}
 
 .top-bar {
     width: 100%;
@@ -73,8 +89,10 @@ body {
  bottom: 0;
     z-index: 10;
  width: 40vw;
- margin-top: 10vh;
- 
+ margin-top: 15vh;
+
+    filter:drop-shadow(20px -20px 60px rgb(0, 0, 0));
+
     
     pointer-events: none;
 }
@@ -181,9 +199,9 @@ border-radius: 20px;
 @media (max-width: 768px) {
     .container {
         width: 100%;
-    
+    height: auto;
         border: none;
-        padding: 20px;
+        padding: 5vh;
         padding-bottom: 0;
     }
     
@@ -192,7 +210,7 @@ border-radius: 20px;
     }
 
     .big-text, .hollow-text {
-        font-size: 20vw; /* Make it even bigger on mobile width */
+        font-size: 25vw; /* Make it even bigger on mobile width */
     }
 
     .roles-wrapper {
@@ -201,6 +219,52 @@ border-radius: 20px;
         font-size: 1.1rem;
 
     }
+    .role{
+        padding: 2.5px 5px 2.5px 5px;
+        font-size:10px ;
+    }
+
+    .welcome{
+        margin-bottom: 5vh;
+    }
 
   
 }
+
+
+.about{
+     position: sticky;
+    top: 0;
+border-radius: 2%;
+    width: 100%;
+    height: auto;
+    background: #337218;
+    z-index: 10;
+    box-shadow: -20px -20px 30px -10px rgb(0, 0, 0);
+padding: 10px;
+display: grid;
+grid-template-columns: 2fr 1fr ;
+
+
+}
+
+
+.abttxt{
+ text-align: center;
+ justify-content: center;
+
+}
+
+
+
+.projects{
+border-radius: 2%;
+    width: 100%;
+    height: 100vh;
+    background: #494949;
+    z-index: 11;
+    box-shadow: -20px -20px 30px -10px rgb(0, 0, 0);
+    
+}
+
+
