@@ -1,0 +1,13 @@
+body{
+
+    background: #0f0f0f;
+    margin: 0;
+    padding: 0;
+}
+
+.head{
+
+    background: #202020;
+    width: 100%;
+height: fit-content;
+}
